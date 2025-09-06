@@ -14,6 +14,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN = os.getenv("DISCORD_TOKEN")
+print("TOKEN:", TOKEN)  # temporary debug
+bot.run(TOKEN)
+
+TOKEN = os.getenv("DISCORD_TOKEN")
 LOG_CHANNEL_ID = int(os.getenv("LOG_CHANNEL_ID"))
 STAFF_ROLE_ID = int(os.getenv("STAFF_ROLE_ID"))
 
@@ -224,3 +228,4 @@ if TOKEN is None:
     sys.exit(1)
 
 bot.run(TOKEN)
+
